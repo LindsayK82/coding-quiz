@@ -4,6 +4,7 @@ var answersTX=document.getElementById("answers");
 var questionIndex = 0;
 var timeEl = document.getElementById("timer");
 var secondsLeft = 60;
+var answerButtons = document.querySelector(".answers");
 
 function startGame() {
     isWin = false;
@@ -51,7 +52,7 @@ function showQuestions(){
 
 
 function showResults(questions){
-	
+        console.log("showResults");
         var answerContainers = answers[answersTX];
         var userAnswer = '';
         var numCorrect = 0;
@@ -73,7 +74,7 @@ function showResults(questions){
     }  console.log(showResults);
 
     startButton.addEventListener("click", startGame);
-    
+    answerButtons.addEventListener("click", showResults);
     
     // $( function(beginGame) {
     //     $( ".widget input[type=submit], .widget a, .widget button" ).button();
