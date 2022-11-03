@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background: white;
+}
+
+.large-font {
+    font-size: 100px;   
+    font-weight: bolder;
+    color: black;
+    display:flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.question-field {
+    border: 8px, black;
+    font-size: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;   
+}
+
+.ui-button {
+    display:flex;
+    flex:wrap;
+    align-items:center;
+    justify-content:center;
+    border: 8px solid green
+}   
+
+.card {
+    background: radial-gradient(circle, lightblue (240,230,140,1) 0%);
+    background-color:gray;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: lightblue(60, 64, 67, 2) 0 1px 2px 0,
+      lightgrey(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    padding: 300px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.align-center {
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+}
+ 
+
+/* Two issues to resolve: Button align center; answers not highlighting correct/incorrect, moving to next question */
