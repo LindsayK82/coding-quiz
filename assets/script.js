@@ -13,6 +13,7 @@ function startGame() {
 
     setTime();
     showQuestions();
+    showResults();
 }
 
 
@@ -49,17 +50,17 @@ function showQuestions(){
 
 
 
-function showResults(questions, quizContainer,   resultsContainer){
+function showResults(questions){
 	
-        var answerContainers = quizContainer.querySelectorAll('.answers');
+        var answerContainers = answers[answersTX];
         var userAnswer = '';
         var numCorrect = 0;
         
-        for(var i=0; i<questions.length; i++){
+        for(var i=0; i<answers.length; i++){
     
-            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+            // userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
             
-            if(userAnswer===questions[i].correctAnswer){
+            if(userAnswer===answersTX[i].correctAnswer){
                 numCorrect++;
                 
                 answerContainers[i].style.color = 'lightgreen';
@@ -68,10 +69,11 @@ function showResults(questions, quizContainer,   resultsContainer){
                 answerContainers[i].style.color = 'red';
             }
         }
-            resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-    }  
+            // resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+    }  console.log(showResults);
 
     startButton.addEventListener("click", startGame);
+    
     
     // $( function(beginGame) {
     //     $( ".widget input[type=submit], .widget a, .widget button" ).button();
